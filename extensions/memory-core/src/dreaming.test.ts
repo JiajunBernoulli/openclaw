@@ -1,6 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import type { OpenClawConfig } from "openclaw/plugin-sdk/memory-core";
+import type { OpenClawConfig, OpenClawPluginApi } from "openclaw/plugin-sdk/memory-core";
 import { describe, expect, it, vi } from "vitest";
 import {
   clearInternalHooks,
@@ -709,7 +709,7 @@ describe("gateway startup reconciliation", () => {
         registerInternalHook(event, handler);
       },
       on: vi.fn(),
-    } as never;
+    } as unknown as OpenClawPluginApi;
 
     try {
       registerShortTermPromotionDreaming(api);
@@ -779,7 +779,7 @@ describe("gateway startup reconciliation", () => {
         registerInternalHook(event, handler);
       },
       on: onMock,
-    } as never;
+    } as unknown as OpenClawPluginApi;
 
     try {
       registerShortTermPromotionDreaming(api);
@@ -854,7 +854,7 @@ describe("gateway startup reconciliation", () => {
         registerInternalHook(event, handler);
       },
       on: onMock,
-    } as never;
+    } as unknown as OpenClawPluginApi;
 
     try {
       registerShortTermPromotionDreaming(api);
@@ -946,7 +946,7 @@ describe("gateway startup reconciliation", () => {
         registerInternalHook(event, handler);
       },
       on: onMock,
-    } as never;
+    } as unknown as OpenClawPluginApi;
 
     try {
       registerShortTermPromotionDreaming(api);
@@ -1012,7 +1012,7 @@ describe("gateway startup reconciliation", () => {
         registerInternalHook(event, handler);
       },
       on: onMock,
-    } as never;
+    } as unknown as OpenClawPluginApi;
 
     try {
       registerShortTermPromotionDreaming(api);
@@ -1068,7 +1068,7 @@ describe("gateway startup reconciliation", () => {
         registerInternalHook(event, handler);
       },
       on: onMock,
-    } as never;
+    } as unknown as OpenClawPluginApi;
 
     try {
       registerShortTermPromotionDreaming(api);
